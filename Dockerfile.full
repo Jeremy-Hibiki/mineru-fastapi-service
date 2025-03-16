@@ -33,8 +33,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY ./scripts/download_models.py .
 RUN . /app/.venv/bin/activate
 
-RUN  --mount=type=cache,target=/root/.cache/huggingface \
-  uv pip install huggingface_hub \
+RUN uv pip install huggingface_hub \
   && . /app/.venv/bin/activate \
   && mkdir -p /opt/models \
   && python3 ./download_models.py \
