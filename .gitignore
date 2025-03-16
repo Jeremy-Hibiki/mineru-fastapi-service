@@ -1,0 +1,24 @@
+*.pdf
+*.md
+!README.md
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.txt
+*.json
+
+!requirements*txt
+
+output/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
