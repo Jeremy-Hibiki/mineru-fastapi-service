@@ -23,7 +23,6 @@ RUN python3 -m venv /app/.venv
 
 
 ENV UV_LINK_MODE=copy
-COPY requirements.txt .
 RUN --mount=type=cache,target=/root/.cache/uv \
   --mount=type=bind,source=uv.lock,target=uv.lock \
   --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
